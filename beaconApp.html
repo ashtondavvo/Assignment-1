@@ -1,0 +1,118 @@
+<html>
+<head><link rel="stylesheet" type="text/css" href="beaconStyle.css"></head>
+<body>
+<div class="top_banner">
+    <div id="menu_logo" class="menu_logo"  onclick="toggleMenu(this)">
+        <div class="bar1" ></div>
+        <div class="bar2" ></div>
+        <div class="bar3" ></div>
+    </div>
+    <div class="Title">
+        <a class="Title_text"> BEACON ORDERING APP </a>
+    </div>    
+</div>
+<div class="website_body">
+<div class="Idea">
+    <h1><a name="linkto_idea">IDEA</a></h1>
+
+    <img class="beacons" src="beacons.png"></img>
+    <p>The Beacon Ordering App is aimed at making implemnting beacons into a food / beverage business more appealing
+    to business owners. It achieves this by adding functionality that can help them become more productive and
+    effiecnt in serving their customers.</p>
+
+    <p>While you are in a reastraunt or cafe with beacons installed the app will know you are inside the store
+        and allow you to request service, or make your order. Your order will be sent to the kitchen where it will
+        prepared. Using the beacons and your phone, the app will be able to determine which table made the order
+        meaning the staff will know who ordered the drink or meal.
+    </p>
+    <p>Other features include being able to browse the menu, and being notified what the soup of the day etc are. As
+        well as any deals the business has on while you are there. Businesses will also be able to incorporate loyalty
+        programs into the app as well that encourage repeat business and use of the app.</p>
+
+        
+
+</div>
+<div class="Research"> 
+    <h1><a name="linkto_research">RESEARCH</a></h1>
+        
+    <iframe class="kontakt_yt" src="https://www.youtube.com/embed/x1hfdD8XQXA" frameborder="0" allowfullscreen></iframe>
+
+    <p>The above Youtube video from Kontakt.io explains the different beacon deployment options a business can take.
+        The first option is to install a grid based system which requires more beacons and takes longer to set up, for this
+        reason I believe it is unlikely that businesses will be as likely to adopt this beacon layout. The second option
+        is a point based system, that instead uses how far away you are from the beacon to approximated location.</p>
+
+        <p>Due to the larger set up cost and set up time invoved in the grid based system, I believe that the point
+            based system has a much better chance of being adopted. This means unfortunately a super accurate table based
+            order system couldn't be a required feature. However an easy solution would be to number each table and the
+            customer would simply have to say which table they were ordering for.
+        </p>
+    </div>
+
+<div class="How_it_works">
+    <h1><a name="linkto_how_it_works">HOW IT WORKS</a></h1>
+    <img class="api" src="api.png"></img>
+    <p>Using the API provided by Kontact.io it will be possible to develop a mobile app that can
+    communicate with the beacons. The beacon will send out a message letting the app know what store you are currently in,
+    then after connecting to a server you will be able to view the menu and place an order or request to be served. The
+    will have the business version of the App which will recieve the request or order, and will know who order based on
+    the location of the phone which made the request if they use a grid based system, which may not be desirable to some
+    business owners.</p>
+
+    <p>The beacon could also be set up to relay other messages to devices with the app installed, such as the options for
+        the soup or fish of the day for example, or any other special deals the business has put on. </p>
+
+</div>
+
+<div class="Benefits">
+    <h1><a name="linkto_benefits"></a>BENEFITS</h1>
+    <p>This app will benefit the businesses who adopt it as it means during peak times, customers wont have to wait to
+        order another drink, and as a result may end up buying more. If not at the very least it will reduce customer 
+        annoyance as they wont be left waiting to be served. Also taking orders through the app will spped up the process
+        of getting the order back to the kitchen. It will also give potential informationa and statitics to the business 
+        owner or manager about the demographics of their customers, what they order and how much they pay in total, on 
+        average.</p>
+
+        <p>Collecting information like this can make it easier for the business to then create better deals or promotions 
+            to attract new customers, and increase repeat customers. It can also provide further insite into what meals are
+            the most popular at certain times and with which customers, and potentially could makes suggestions to customers,
+            based on their previous behaviour meals that suit their taste.
+        </p>
+
+</div>
+</div>
+
+
+
+
+
+  <!-- Modal content -->
+  <div class="menu_content" id="menu_content">
+    <div class="menu_item" ><a href="#linkto_idea" onclick="toggleMenu(this)">IDEA</a></div>
+    <hr />
+    <div class="menu_item"><a href="#linkto_research" onclick="toggleMenu(this)">RESEARCH</a><div>
+    <hr />
+    <div class="menu_item"><a href="#linkto_how_it_works" onclick="toggleMenu(this)">HOW IT WORKS</a><div></div>
+    <hr />
+    <div class="menu_item"><a href="#linkto_benefits" onclick="toggleMenu(this)">BENEFITS</a><div></div>
+  </div>
+
+
+<script> 
+function toggleMenu(x) {
+    if(document.getElementById("menu_content").style.display == "block"){
+        document.getElementById("menu_content").style.webkitAnimationName= "animatebottom";
+        document.getElementById("menu_content").style.animationName= "animatebottom";
+        document.getElementById("menu_content").style.display = "none";
+    }
+    else{
+        document.getElementById("menu_content").style.webkitAnimationName = "animatetop";
+        document.getElementById("menu_content").style.animationName= "animatetop";
+        document.getElementById("menu_content").style.display = "block";
+    }
+    document.getElementById("menu_logo").toggle("change");
+    
+}    
+</script>
+</body>
+</html>
